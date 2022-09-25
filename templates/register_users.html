@@ -1,0 +1,68 @@
+{% extends 'common.html' %}
+
+{% block body%}
+<div>
+	 <form action="{%url 'register_student'%}" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+        <main>
+    {%if  yuborildi%}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <h4>{{yuborildi}}</h4>
+{%endif%}
+</div>
+     <div class="container">
+                <div class="row justify-content-center">
+
+				  <div class="row">
+				    <div class="col-sm-6 offset-md-3">
+
+                            <h2 class="Login">Sign Up for send booking</h2><br>
+				    		<div class="input-group mb-100">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+							  </div>
+							  <div id="layoutAuthentication">
+
+
+
+
+
+
+                                                <label class="small mb-1" for="{{form.first_name.id_for_label}}">Ism</label>
+                                                {{form.first_name}}
+                              </div>
+                                        <div class="col-md-30">
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="{{form.last_name.id_for_label}}">Familiya</label>
+                                                {{form.last_name}}
+
+
+
+
+                                        <div class="col-md-30">
+                                            <label class="small mb-1" for="{{form.email.id_for_label}}">Elektron pochta</label>
+                                            {{form.email}}
+
+                                            <div class="col-md-30">
+                                            <label class="small mb-1" for="{{form.email.id_for_label}}">Telefon raqami</label>
+                                            {{form.phonenumber}}
+
+
+                                        <div class="col-md-30">
+                                            <label class="small mb-1" for="{{form.email.id_for_label}}">Elektron pochta</label>
+                                            {{form.password}}
+
+                                    <div class="form-group mt-4 mb-0">
+                                        <input class="btn btn-primary btn-block" type="submit" value="Ro'yhatdan o'tish">
+
+
+    </div>
+
+
+
+
+
+
+
+
+{%endblock%}

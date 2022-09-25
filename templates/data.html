@@ -1,0 +1,22 @@
+{% extends 'common.html' %}
+
+{% block body%}
+<div>
+
+{%for x in data%}
+    date
+    {{x.date}}
+    time
+    {{x.time_start}}
+    <br>
+    {%endfor%}
+</div>
+
+
+
+
+
+
+
+
+{%endblock%}
